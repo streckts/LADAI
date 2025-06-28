@@ -1,0 +1,8 @@
+pandas
+numpy
+regex
+drain3==0.9.7
+jsonpickle
+scikit-learn
+torch
+jupyter
