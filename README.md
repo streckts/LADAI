@@ -42,9 +42,6 @@ Jupyter Notebooks (for data exploration/model training)
 
 ## File Structure
 
-perl
-Copy
-Edit
 log-anomaly-detector/
 ├── data/                  # (gitignored) Raw and structured HDFS logs  
 ├── parsed_logs/           # Parsed and sessionized output  
@@ -54,6 +51,7 @@ log-anomaly-detector/
 │   ├── parse_logs.py      # Parses raw logs using Drain3  
 │   └── sessionize_logs.py # Extracts sessions and sequences  
 └── README.md
+
 ## Dataset
 
 We use the publicly available HDFS log dataset from Loghub (https://github.com/logpai/loghub), which includes:
@@ -63,11 +61,8 @@ HDFS.log: raw, unstructured log lines
 HDFS_100k.log_structured.csv: pre-parsed logs with anomaly labels for evaluation
 
 To download the dataset, run:
-
-bash
-Copy
-Edit
 bash scripts/download_data.sh
+
 ## Future Plans
 
 Train an LSTM model on sessionized sequences to predict the next log template
