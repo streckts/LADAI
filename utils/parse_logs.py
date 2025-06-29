@@ -7,7 +7,7 @@ import os
 def parse_hdfs_logs(input_path, output_path):
     # Use persistent template state so reruns keep learned structure
     persistence = FilePersistence("drain3_state.json")
-    template_miner = TemplateMiner(persistence=persistence)
+    template_miner = TemplateMiner()
 
     logs = []
     with open(input_path, "r") as file:
