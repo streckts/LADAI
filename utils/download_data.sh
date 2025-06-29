@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# Create data directory if it doesn't exist
 mkdir -p data
 cd data
 
-echo "Downloading HDFS dataset from Loghub..."
+echo "Downloading structured CSV..."
+wget -nc https://raw.githubusercontent.com/logpai/loglizer/master/data/HDFS/HDFS_100k.log_structured.csv
 
-# Download structured CSV (with anomaly labels)
-wget -nc https://zenodo.org/record/3227177/files/HDFS_100k.log_structured.csv
+echo "Downloading small HDFS sample (2k lines)..."
+wget -nc https://raw.githubusercontent.com/logpai/loghub/master/HDFS/HDFS_2k.log
 
-# Download raw HDFS.log file
-wget -nc https://zenodo.org/record/3227177/files/HDFS.log
-
-echo "Download complete. Files saved in ./data/"
+echo "Done. CSV and sample log are in ./data/"

@@ -1,0 +1,11 @@
+# Ignore raw and structured datasets
+data/
+!data/.gitkeep   # Optional: keep the empty folder in the repo
+
+# Ignore generated model inputs/outputs
+model_data/
+!model_data/.gitkeep  # Optional: keep folder in repo
+
+# Python
+__pycache__/
+*.pyc
