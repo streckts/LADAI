@@ -37,6 +37,6 @@ def parse_hdfs_logs(input_path, output_path):
 
 # DEFAULT
 if __name__ == "__main__":
-    input_file = "data/HDFS.log"
+    input_file = "data/HDFS_2k.log"
     output_file = "parsed_logs/hdfs_parsed.csv"
     parse_hdfs_logs(input_file, output_file)
