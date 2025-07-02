@@ -1,6 +1,6 @@
 # Ignore raw and structured datasets
 data/
-!data/.gitkeep   # Optional: keep the empty folder in the repo
+parsed_logs/
 
 # Ignore generated model inputs/outputs
 model_data/

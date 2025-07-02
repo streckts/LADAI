@@ -36,9 +36,10 @@ def generate_lstm_pairs(session_csv_path, output_dir, sequence_length=4):
     unique_ids = sorted(set(np.concatenate([X.flatten(), y])))
     meta = {
         "num_unique_cluster_ids": len(unique_ids),
-        "unique_cluster_ids": unique_ids,
-        "sequence_length": sequence_length
+        "unique_cluster_ids": [int(i) for i in unique_ids],
+        "sequence_length": int(sequence_length)
     }
+
     with open(os.path.join(output_dir, "meta.json"), "w") as f:
         json.dump(meta, f, indent=2)
 
